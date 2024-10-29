@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+        <input type="text" id="city-input" placeholder="Enter city name" required>
+        <button id="search-button">Search</button>
+        <button id="current-location-button">Use Current Location</button>
+        <button id="save-favorite-button" class="hidden">Save to Favorites</button>
+    </header>
+    <main>
+        <div id="weather-info" class="hidden">
+            <h2 id="city-name"></h2>
+            <img id="weather-icon" alt="Weather Icon">
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="description"></p>
+        </div>
+        <div id="forecast" class="hidden">
+            <h3>5-Day Forecast</h3>
+            <div id="forecast-list"></div>
+        </div>
+        <div id="favorites">
+            <h3>Favorite Cities</h3>
+            <ul id="favorites-list">
+                <!-- Example Favorite Item -->
+                <li>
+                    <img src="path_to_weather_icon.png" alt="Weather Icon" class="favorite-icon">
+                    <span class="favorite-location">City Name</span>
+                    <button class="remove-favorite"><i class="fas fa-trash"></i></button>
+                </li>
+            </ul>
+        </div>
+        <div id="error-message" class="hidden"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Weather App</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

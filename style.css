@@ -1,0 +1,231 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Updated to use Google Fonts */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e2f0cb 0%, #87d4e5 100%);
+    color: #333;
+}
+
+header {
+    background: rgba(0, 123, 255, 0.8);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Rounded corners for header */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #0056b3; /* Darker blue on focus */
+    outline: none; /* Remove outline */
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+#weather-info, #forecast {
+    background: #ffffff; /* White background for content */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px; /* Responsive width */
+    transition: transform 0.3s ease;
+}
+
+#weather-info:hover, #forecast:hover {
+    transform: scale(1.02); /* Slight zoom effect */
+}
+
+#weather-icon {
+    width: 80px; /* Fixed size for the icon */
+    height: auto;
+}
+
+#forecast-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap items to new lines if needed */
+}
+
+.forecast-item {
+    width: calc(33.33% - 10px); /* Three items per row with spacing */
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+    background: #f8f9fa; /* Light background for forecast items */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.forecast-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+#error-message {
+    color: red;
+}
+
+#favorites {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.favorite-icon {
+    width: 40px; /* Set icon width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+}
+
+#favorites-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the list items */
+}
+
+#favorites-list li {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    background: #ffffff; /* White background for favorites */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 100%; /* Full width for consistency */
+    max-width: 400px; /* Responsive width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#favorites-list li:hover {
+    background: #e2e2e2; /* Darker grey on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.remove-favorite {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: #dc3545; /* Red color for delete button */
+    cursor: pointer;
+    margin-left: auto; /* Align button to the right */
+    font-size: 1.2em; /* Icon size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.remove-favorite:hover {
+    color: #c82333; /* Darker red on hover */
+}
+
+/* Added styles for better visuals */
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: calc(100% - 20px); /* Full width on smaller screens */
+        margin-right: 0; /* Remove margin */
+    }
+
+    #favorites-list li {
+        flex-direction: column; /* Stack icon and text */
+        align-items: flex-start; /* Align items to the left */
+    }
+}
+
+#current-location-button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#current-location-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.forecast-item {
+    margin-bottom: 20px; /* Space between each forecast item */
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative; /* For positioning effects */
+}
+
+.forecast-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.forecast-date {
+    font-weight: bold; /* Bold date */
+    font-size: 1.2em; /* Slightly larger font size */
+    margin-bottom: 5px; /* Space below the date */
+}
+
+.forecast-temp {
+    font-size: 1.5em; /* Larger font for temperature */
+    color: #ff5722; /* Color for temperature */
+    margin: 5px 0; /* Space above and below */
+}
+
+.forecast-wind, .forecast-humidity, .forecast-precipitation {
+    font-size: 0.9em; /* Slightly smaller font */
+    color: #555; /* Darker grey for other details */
+}
